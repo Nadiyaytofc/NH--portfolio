@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>මගේ නිර්මාණ Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light Blue/Gray Background */
+        }
+        /* Custom Utility for Card Hover Effect */
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .section-heading {
+            border-bottom: 4px solid #3b82f6; /* Blue underline */
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex-shrink-0 text-2xl font-bold text-indigo-600">
+                     NH TECH ACCDAMY 
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-150 font-medium">පිළිබඳ</a>
+                    <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-150 font-medium">දක්ෂතා</a>
+                    <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-150 font-medium">ව්‍යාපෘති</a>
+                    <a href="#contact" class="px-3 py-1 text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition duration-150">අමතන්න</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">පිළිබඳ</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">දක්ෂතා</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">ව්‍යාපෘති</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 text-center hover:bg-indigo-700 mt-2">අමතන්න</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-white py-16 sm:py-24 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                <div class="flex-shrink-0">
+                    <img class="h-40 w-40 rounded-full object-cover border-4 border-indigo-500 shadow-xl" 
+                         src="https://files.catbox.moe/9bwglm.png" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/160x160/2563eb/ffffff?text=Profile';" 
+                         alt="">
+                </div>
+                <div class="md:text-left text-center">
+                    <p class="text-lg text-indigo-600 font-semibold uppercase tracking-wider mb-2">
+                        නිර්මාණකරුවෙක්, නවෝත්පාදකයෙක්, ගැටළු විසඳන්නෙක්
+                    </p>
+                    <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                        I'am NADIL HANSAJA
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-2xl">
+                        පරිශීලක කේන්ද්‍රීය (User-Centric) වෙබ් අඩවි සහ යෙදුම් නිර්මාණය කිරීම පිළිබඳව විශේෂඥ දැනුමක් මා සතුව ඇත.
+                    </p>
+                    <div class="mt-6 flex justify-center md:justify-start space-x-4">
+                        <a href="#projects" class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 transition duration-300 shadow-lg">
+                            ව්‍යාපෘති බලන්න
+                        </a>
+                        <a href="#contact" class="px-6 py-3 border border-indigo-600 text-indigo-600 font-medium rounded-xl hover:bg-indigo-50 transition duration-300">
+                            මා හා සම්බන්ධ වන්න
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-gray-900 mb-10 text-center section-heading">
+                මා පිළිබඳ
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-lg text-gray-700">
+                    <p>
+                        I'am Nadil. මම වසර 2කට අධික කාලයක් ඩිජිටල් නිෂ්පාදන නිර්මාණය කිරීමේ ක්ෂේත්‍රයේ සේවය කර තිබෙනවා.
+                        මගේ ප්‍රධාන අවධානය යොමු වන්නේ සෞන්දර්යාත්මකව ප්‍රියජනක, නමුත් ඒ සමඟම ඉතා පහසුවෙන් භාවිතා කළ හැකි
+                        (highly usable) විසඳුම් නිර්මාණය කිරීමයි.
+                    </p>
+                    <p>
+                        මම මූලික වශයෙන් Frontend සංවර්ධනය, UI/UX නිර්මාණය සහ වේගවත් මෘදුකාංග (Lean Software) ගොඩනැගීම සඳහා දායක වෙනවා.
+                        තාක්ෂණය සහ නිර්මාණශීලීත්වය ඒකාබද්ධ කරමින් නව්‍ය විසඳුම් ලබා දීමට මම නිරතුරුවම උත්සාහ කරමි.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600">මූලික තොරතුරු</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3">
+                            <span class="text-indigo-500 font-bold text-xl">🚀</span> 
+                            <span>Location = Buttala, Sri Lanka</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-indigo-500 font-bold text-xl">💼</span> 
+                            <span>Job = Web manegment</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-indigo-500 font-bold text-xl">📧</span> 
+                            <span>Email = chutyputha01@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-gray-900 mb-10 text-center section-heading">
+                මා සතු දක්ෂතා
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="bg-white p-5 rounded-xl shadow-md text-center border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="text-4xl mb-2">⚛️</div>
+                    <p class="font-semibold text-gray-700">React & Next.js</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-md text-center border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="text-4xl mb-2">🎨</div>
+                    <p class="font-semibold text-gray-700">UI/UX Design</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-md text-center border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="text-4xl mb-2">🛠️</div>
+                    <p class="font-semibold text-gray-700">HTML & CSS</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-md text-center border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="text-4xl mb-2">📘</div>
+                    <p class="font-semibold text-gray-700">Tailwind CSS</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-md text-center border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="text-4xl mb-2">⚙️</div>
+                    <p class="font-semibold text-gray-700">Node.js / Express</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-md text-center border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="text-4xl mb-2">💾</div>
+                    <p class="font-semibold text-gray-700">Firebase / DBs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-gray-900 mb-10 text-center section-heading">
+                මගේ ව්‍යාපෘති
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 border border-gray-100">
+                    <img class="w-full h-48 object-cover" 
+                         src="https://placehold.co/600x400/3b82f6/ffffff?text=E-Commerce+Site" 
+                         alt="">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">නවීන E-Commerce වෙබ් අඩවිය</h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            වේගවත් Next.js තාක්ෂණය භාවිතයෙන් ගොඩනැගූ, පිරිසිදු සහ ප්‍රතිචාරාත්මක මාර්ගගත සාප්පු සවාරි වේදිකාවක්.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-medium bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">React</span>
+                            <span class="text-xs font-medium bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Tailwind</span>
+                            <span class="text-xs font-medium bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 border border-gray-100">
+                    <img class="w-full h-48 object-cover" 
+                         src="https://placehold.co/600x400/10b981/ffffff?text=Data+Dashboard" 
+                         alt="">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">දත්ත විශ්ලේෂණ Dashboard</h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            සංකීර්ණ දත්ත පහසුවෙන් ප්‍රදර්ශනය කිරීම සඳහා නිර්මාණය කරන ලද, අධි-ක්‍රියාකාරී (high-performance) උපකරණ පුවරුව.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-medium bg-green-100 text-green-800 px-3 py-1 rounded-full">Angular</span>
+                            <span class="text-xs font-medium bg-green-100 text-green-800 px-3 py-1 rounded-full">Chart.js</span>
+                            <span class="text-xs font-medium bg-green-100 text-green-800 px-3 py-1 rounded-full">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 border border-gray-100">
+                    <img class="w-full h-48 object-cover" 
+                         src="https://placehold.co/600x400/f59e0b/ffffff?text=Mobile+App+Design" 
+                         alt="">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">ජංගම යෙදුම් UI/UX නිර්මාණය</h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            පරිශීලක අත්දැකීම් ප්‍රශස්ත කිරීම කෙරෙහි අවධානය යොමු කරමින් කළ Figma නිර්මාණ ව්‍යාපෘතියක්.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-medium bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">Figma</span>
+                            <span class="text-xs font-medium bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">Prototyping</span>
+                            <span class="text-xs font-medium bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">User Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-gray-900 mb-10 text-center section-heading">
+                මා හා සම්බන්ධ වන්න
+            </h2>
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-200">
+                <p class="text-center text-lg text-gray-600 mb-6">
+                    අපගේ ඊළඟ ව්‍යාපෘතිය ගැන කතා කිරීමට ඔබට අවශ්‍ය නම් පහත පෝරමය පුරවන්න.
+                </p>
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">නම</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">විද්‍යුත් තැපෑල</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">පණිවිඩය</label>
+                        <textarea id="message" name="message" rows="4" required
+                                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+                    </div>
+                    <button type="submit" id="submitButton"
+                            class="w-full px-4 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition duration-300 shadow-md">
+                        පණිවිඩය යවන්න
+                    </button>
+                    <div id="draftContainer" class="mt-8 pt-4 border-t border-gray-200">
+                        <h4 class="font-semibold text-gray-700 mb-3 flex items-center space-x-2">
+                            AI-ජනනය කළ ප්‍රතිචාර කෙටුම්පත ✨
+                        </h4>
+                        <div id="draftOutput" class="p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-lg text-sm text-gray-700 whitespace-pre-wrap min-h-[50px]">
+                            පෝරමය ඉදිරිපත් කළ පසු, මෙහි ප්‍රතිචාර කෙටුම්පතක් දිස් වනු ඇත.
+                        </div>
+                    </div>
+                    <div id="formMessage" class="mt-4 text-center text-sm text-green-600 hidden">
+                        පණිවිඩය සාර්ථකව යැව්වා!
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg font-medium mb-4">Nadil Hansaja</p>
+            <div class="flex justify-center space-x-6 mb-4 text-xl">
+                <a href="#" class="hover:text-indigo-400 transition duration-150" title="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.518-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="#" class="hover:text-indigo-400 transition duration-150" title="Twitter/X">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.791-1.574 2.153-2.716-.951.566-2.007.977-3.12 1.264-1.825-1.93-4.821-1.928-6.66 0-1.39 1.47-1.39 3.86.002 5.33l-10.982-1.28c-2.31 4.793-7.584 7.234-11.439 5.894 1.05.748 2.28 1.168 3.58 1.168 1.63 0 3.14-.54 4.34-1.46-1.516-.043-2.83-1.036-3.27-2.355.43.08.86.13 1.29.13 0-.008-.002-.016-.002-.024-.265-.89-.974-1.63-1.898-2.06.602.13 1.18.39 1.72.76-2.484-1.82-3.83-4.9-3.83-8.31s1.346-6.49 3.83-8.31c-3.19.74-5.52 3.12-5.52 6.09 0 1.29.54 2.47 1.46 3.32-.42-.01-.84-.04-1.26-.14v.05c0 4.22 2.99 7.74 6.94 8.52-.61.16-1.26.24-1.92.24-.48 0-.94-.04-1.38-.13.98 3.06 3.83 5.3 7.25 5.31 2.07 0 3.93-.82 5.3-2.14 1.62 1.28 3.65 2.04 5.8 2.04 1.19 0 2.34-.17 3.42-.49-.01-.73-.17-1.45-.49-2.12z"/></svg>
+                </a>
+            </div>
+            <p class="text-sm text-gray-400">
+                © 2025 NADIL HANSAJA . All Right reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Gemini API Configuration (UPDATED) ---
+        const API_KEY = ""; // !!! ඔබගේ සැබෑ යතුර මෙහි ඇතුළත් කරන්න !!! 
+        const MODEL_NAME = "gemini-2.5-flash"; 
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent`;
+
+        // Function to handle exponential backoff and fetch
+        async function fetchWithBackoff(url, options, retries = 5, delay = 1000) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    
+                    // Check for 400 Bad Request (including 401/403 for API Key issues)
+                    if (response.status >= 400 && response.status < 500 && response.status !== 429) {
+                        const errorBody = await response.json();
+                        throw new Error(`Client Error: ${response.status} ${response.statusText} - ${errorBody.error?.message || 'Unknown issue.'}`);
+                    }
+                    
+                    if (response.ok) return response;
+                    
+                    if (response.status === 429 && i < retries - 1) { // Too Many Requests
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        delay *= 2; // Exponential backoff
+                        continue;
+                    }
+                    // Handle 5xx Server Errors with backoff
+                    if (response.status >= 500 && i < retries - 1) {
+                         await new Promise(resolve => setTimeout(resolve, delay));
+                         delay *= 2;
+                         continue;
+                    }
+
+                    throw new Error(`API Error: ${response.status} ${response.statusText}`);
+
+                } catch (error) {
+                    if (i === retries - 1) throw error;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    delay *= 2;
+                }
+            }
+        }
+
+        // --- LLM Core Logic: Generate Professional Email Draft ---
+        const generateResponseDraft = async (senderName, senderEmail, messageContent) => {
+            const draftOutput = document.getElementById('draftOutput');
+
+            if (!API_KEY) {
+                draftOutput.innerHTML = `<p class="text-red-600">දෝෂයකි: Gemini API යතුර (API Key) සකසා නැත. කරුණාකර කේතයේ API_KEY විචල්‍යයෙහි යතුර ඇතුළත් කරන්න.</p>`;
+                return;
+            }
+
+            draftOutput.innerHTML = `
+                <div class="flex items-center space-x-2 text-indigo-600">
+                    <svg class="animate-spin h-5 w-5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>ප්‍රතිචාරය කෙටුම්පත් කරමින්...</span>
+                </div>
+            `;
+
+            // System prompt instructing the model to act as Janaka Bandara and draft a reply in English
+            const systemPrompt = "You are Janaka Bandara, a Senior Frontend Designer. You have received an inquiry from a potential client. Your task is to draft a polite, professional, and concise email reply (in English) to the sender. The reply should: 1. Thank them for their message. 2. Briefly acknowledge the topic of their message. 3. Propose a quick follow-up call/meeting to discuss their project further. 4. Sign off professionally.";
+            
+            const userQuery = `Draft an email response. Sender Name: ${senderName}. Sender Email: ${senderEmail}. Sender Message: "${messageContent}"`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                config: {
+                    systemInstruction: { parts: [{ text: systemPrompt }] },
+                    // Optionally restrict output to text only (not JSON/Code)
+                    // responseMimeType: "text/plain", 
+                }
+            };
+
+            try {
+                const response = await fetchWithBackoff(API_URL, {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'X-Goog-Api-Key': API_KEY // Using header for API key
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                
+                // Robustly extract text, handle potential lack of candidates/parts
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text || result.promptFeedback?.blockReason || "කෙටුම්පතක් ජනනය කිරීමට නොහැකි විය. (ප්‍රතිචාරය අවහිර කර ඇත/නැත)";
+                
+                draftOutput.innerHTML = `
+                    <p class="font-bold mb-2 text-indigo-800">ප්‍රතිචාර කෙටුම්පත:</p>
+                    <pre class="bg-yellow-100 p-3 rounded-md overflow-x-auto text-xs sm:text-sm">${text}</pre>
+                    <p class="mt-3 text-xs text-gray-600">මෙම කෙටුම්පත ඔබගේ විද්‍යුත් තැපැල් සේවාවට පිටපත් කර යැවිය හැකිය.</p>
+                `;
+
+            } catch (error) {
+                console.error("Gemini API දෝෂයක්:", error);
+                // Display the specific error message if available
+                draftOutput.innerHTML = `<p class="text-red-600">දෝෂයකි: AI කෙටුම්පතක් ජනනය කිරීමට නොහැකි විය. (${error.message || "API Call Failed"})</p>`;
+            }
+        };
+
+
+        // --- DOM Initialization and Event Listeners ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const submitButton = document.getElementById('submitButton');
+            const formMessage = document.getElementById('formMessage');
+            const contactForm = document.querySelector('#contact form');
+            const draftOutput = document.getElementById('draftOutput');
+
+            // --- Mobile Menu Toggle ---
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // --- Form Submission and LLM Call ---
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                
+                if (!name || !email || !message) {
+                    alert('කරුණාකර සියලු ක්ෂේත්‍ර පුරවන්න.');
+                    return;
+                }
+
+                // 1. Show submission/loading state
+                submitButton.textContent = 'යවමින්...';
+                submitButton.disabled = true;
+                submitButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+                submitButton.classList.add('bg-indigo-400');
+                formMessage.classList.add('hidden');
+                draftOutput.innerHTML = 'ප්‍රතිචාර කෙටුම්පතක් ජනනය කිරීමට සූදානම් වෙමින්...';
+
+                // 2. Simulate message sending delay (simulated success)
+                setTimeout(() => {
+                    // Reset button
+                    submitButton.textContent = 'පණිවිඩය යවන්න';
+                    submitButton.disabled = false;
+                    submitButton.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
+                    submitButton.classList.remove('bg-indigo-400');
+
+                    // Show success message
+                    formMessage.textContent = 'ඔබගේ පණිවිඩය ලැබුණා. ස්තූතියි!';
+                    formMessage.classList.remove('hidden');
+                    formMessage.classList.add('text-green-600');
+                    
+                    // Clear form inputs (Optional, only if you want the user to see the response draft and then clear)
+                    // contactForm.reset(); 
+                    
+                    // Hide message after a few seconds
+                    setTimeout(() => {
+                        formMessage.classList.add('hidden');
+                    }, 5000);
+
+                    // 3. Trigger Gemini API call to draft the response
+                    generateResponseDraft(name, email, message);
+
+                }, 1000); // 1 second delay for form submission simulation
+            });
+            
+            // Initial placeholder text for the draft output
+            draftOutput.textContent = 'පෝරමය ඉදිරිපත් කළ පසු, මෙහි ප්‍රතිචාර කෙටුම්පතක් දිස් වනු ඇත.';
+        });
+    </script>
+</body>
+  </html>
